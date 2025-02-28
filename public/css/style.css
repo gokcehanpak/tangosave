@@ -340,4 +340,18 @@ details p {
     .notice-content {
         font-size: 14px;
     }
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    color: var(--primary-color);
+    filter: drop-shadow(var(--neon-shadow));
+    transition: var(--transition);
+}
+
+[data-lang="en"] .logo-icon {
+    color: #2196F3;
+    filter: drop-shadow(0 0 20px rgba(33, 150, 243, 0.3));
 } 
