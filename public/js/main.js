@@ -20,14 +20,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const keys = key.split('.');
             let translation = translations[lang];
             
-            keys.forEach(k => {
-                translation = translation[k];
-            });
+            // Nested objelerde doğru çeviriyi bul
+            for (const k of keys) {
+                if (translation && translation[k]) {
+                    translation = translation[k];
+                } else {
+                    console.warn(`Translation missing for key: ${key} in language: ${lang}`);
+                    return;
+                }
+            }
             
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translation;
             } else {
-                element.textContent = translation;
+                // SVG içeren elementler için özel işlem
+                const svg = element.querySelector('svg');
+                if (svg) {
+                    const svgClone = svg.cloneNode(true);
+                    element.textContent = translation;
+                    element.insertBefore(svgClone, element.firstChild);
+                } else {
+                    element.textContent = translation;
+                }
             }
         });
 
@@ -35,6 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
         langButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
+
+        // Logo rengini güncelle
+        const logoIcon = document.querySelector('.logo-icon');
+        if (logoIcon) {
+            logoIcon.style.color = lang === 'tr' ? '#00ff88' : '#2196F3';
+            logoIcon.style.filter = `drop-shadow(0 0 20px ${lang === 'tr' ? 'rgba(0, 255, 136, 0.3)' : 'rgba(33, 150, 243, 0.3)'})`;
+        }
     }
 
     // Dil butonları için event listener
