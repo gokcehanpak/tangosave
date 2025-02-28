@@ -1,95 +1,41 @@
+// Dil yönetimi
+let currentLang = localStorage.getItem('language') || 
+    (navigator.language.startsWith('tr') ? 'tr' : 'en');
+
+// Sayfa yüklendiğinde dil ayarını uygula
 document.addEventListener('DOMContentLoaded', () => {
-    // Dil yönetimi
-    let currentLang = localStorage.getItem('language') || 
-                     (navigator.language.includes('tr') ? 'tr' : 'en');
-
-    const langButtons = document.querySelectorAll('.lang-btn');
-    const translateElements = document.querySelectorAll('[data-translate]');
-
-    // Dil değiştirme fonksiyonu
-    function changeLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem('language', lang);
-        
-        // Başlık güncelleme
-        document.title = translations[lang].title;
-        
-        // Tüm çevrilebilir elementleri güncelle
-        translateElements.forEach(element => {
-            const key = element.dataset.translate;
-            const keys = key.split('.');
-            let translation = translations[lang];
-            
-            // Nested objelerde doğru çeviriyi bul
-            for (const k of keys) {
-                if (translation && translation[k]) {
-                    translation = translation[k];
-                } else {
-                    console.warn(`Translation missing for key: ${key} in language: ${lang}`);
-                    return;
-                }
-            }
-            
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
-            } else {
-                // SVG içeren elementler için özel işlem
-                const svg = element.querySelector('svg');
-                if (svg) {
-                    const svgClone = svg.cloneNode(true);
-                    element.textContent = translation;
-                    element.insertBefore(svgClone, element.firstChild);
-                } else {
-                    element.textContent = translation;
-                }
-            }
-        });
-
-        // Dil butonlarını güncelle
-        langButtons.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
-
-        // Logo rengini güncelle
-        const logoIcon = document.querySelector('.logo-icon');
-        if (logoIcon) {
-            logoIcon.style.color = lang === 'tr' ? '#00ff88' : '#2196F3';
-            logoIcon.style.filter = `drop-shadow(0 0 20px ${lang === 'tr' ? 'rgba(0, 255, 136, 0.3)' : 'rgba(33, 150, 243, 0.3)'})`;
-        }
-    }
-
+    applyLanguage(currentLang);
+    document.querySelector(`[data-lang="${currentLang}"]`).classList.add('active');
+    
     // Dil butonları için event listener
-    langButtons.forEach(btn => {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            changeLanguage(btn.dataset.lang);
+            const lang = btn.getAttribute('data-lang');
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyLanguage(lang);
+            localStorage.setItem('language', lang);
         });
     });
 
-    // Sayfa yüklendiğinde dili ayarla
-    changeLanguage(currentLang);
+    // Chrome yükleme butonu için event listener
+    document.getElementById('chromeInstall').addEventListener('click', (e) => {
+        e.preventDefault();
+        // Chrome Web Store linki eklenecek
+        window.open('https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID', '_blank');
+    });
 
-    // Chrome'da Yükle butonu için event listener
-    const installButton = document.getElementById('chromeInstall');
-    if (installButton) {
-        installButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Chrome Web Store linki eklenecek
-            window.open('CHROME_STORE_LINK', '_blank');
-        });
-    }
-
-    // SSS animasyonları
-    const details = document.querySelectorAll('details');
-    details.forEach(detail => {
-        detail.addEventListener('toggle', () => {
-            if (detail.open) {
-                const others = Array.from(details).filter(d => d !== detail);
-                others.forEach(d => d.open = false);
-            }
+    // SSS için event listener
+    document.querySelectorAll('details').forEach(detail => {
+        detail.addEventListener('click', () => {
+            // Diğer açık SSS'leri kapat
+            document.querySelectorAll('details[open]').forEach(d => {
+                if (d !== detail) d.removeAttribute('open');
+            });
         });
     });
 
-    // Smooth scroll
+    // Smooth scroll için event listener
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -103,9 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Neon efekt animasyonu
+    // Neon efekti için animasyon
     const neonElements = document.querySelectorAll('.neon-text');
-    neonElements.forEach(element => {
-        element.style.animation = 'neonPulse 2s infinite';
+    neonElements.forEach(el => {
+        el.style.animation = 'neonPulse 2s infinite';
     });
-}); 
+});
+
+// Dil değiştirme fonksiyonu
+function applyLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.setAttribute('data-lang', lang);
+    document.title = translations[lang].title;
+    
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const keys = key.split('.');
+        let translation = translations[lang];
+        
+        for (const k of keys) {
+            translation = translation[k];
+        }
+        
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+} 
