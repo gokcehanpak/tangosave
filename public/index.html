@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tango Yayın Kaydedici</title>
+    <title data-translate="title">Tango Yayın Kaydedici</title>
     <meta name="description" content="Tango canlı yayınlarını kaydetmek için Chrome uzantısı. Tek tıkla kayıt başlatın, otomatik segment birleştirme ve kolay kullanım.">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,23 +15,28 @@
 
     <div class="container">
         <header>
-            <h1 class="neon-text" data-translate="title">Tango Yayın Kaydedici</h1>
+            <h1 class="neon-text">
+                <svg class="logo-icon" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+                <span data-translate="title">Tango Yayın Kaydedici</span>
+            </h1>
             <div class="version-info">
                 <span class="version-badge" data-translate="version">Versiyon 1.0</span>
                 <span class="beta-badge" data-translate="beta">BETA</span>
             </div>
-            <a href="#" id="chromeInstall" class="install-btn" data-translate="installButton">
+            <a href="#" id="chromeInstall" class="install-btn">
                 <svg viewBox="0 0 24 24" width="24" height="24">
                     <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
                 </svg>
-                Chrome'da Yükle
+                <span data-translate="installButton">Chrome'da Yükle</span>
             </a>
         </header>
 
         <section class="important-notice">
             <h2 data-translate="notice.title">Önemli Bilgilendirme</h2>
             <div class="notice-content" data-translate="notice.content">
-                Bu uzantı şu an BETA aşamasındadır ve sadece tekli yayın yapan yayıncılar için kullanılabilir durumdadır. Çoklu yayın özelliği geliştirme aşamasında olduğundan, çoklu yayın yapan yayıncılarda kullanılması önerilmez.
+                Bu uzantı şu an BETA aşamasındadır ve sadece tekli yayın yapan yayıncılar için kullanılabilir durumdadır.
             </div>
         </section>
 
@@ -42,29 +47,29 @@
                     <svg class="icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03c-.02 1.64-1.35 2.97-3 2.97-1.66 0-3-1.34-3-3z"/>
                     </svg>
-                    <h3 data-translate="features.autoMerge">Otomatik Birleştirme</h3>
-                    <p data-translate="features.autoMergeDesc">Kaydedilen segmentler otomatik olarak tek bir video dosyasında birleştirilir</p>
+                    <h3 data-translate="features.autoMerge">Akıllı Segment Birleştirme</h3>
+                    <p data-translate="features.autoMergeDesc">Gelişmiş algoritma sayesinde kaydedilen tüm parçalar otomatik olarak birleştirilerek tek bir kesintisiz video dosyası oluşturulur</p>
                 </div>
                 <div class="feature-card">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12 16l4-4h-3V3h-2v9H8l4 4zm9-13h-6v1.99h6v14.03H3V4.99h6V3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
                     </svg>
-                    <h3 data-translate="features.background">Arka Planda Çalışır</h3>
-                    <p data-translate="features.backgroundDesc">Sekmeyi kapatsanız bile kayıt devam eder</p>
+                    <h3 data-translate="features.background">Kesintisiz Arka Plan Kaydı</h3>
+                    <p data-translate="features.backgroundDesc">Sekmeyi alta atsanız, başka sekmelerde gezinseniz veya tarayıcıyı simge durumuna küçültseniz bile kayıt kesintisiz devam eder</p>
                 </div>
                 <div class="feature-card">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.03-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
                     </svg>
-                    <h3 data-translate="features.lowResource">Düşük Kaynak Kullanımı</h3>
-                    <p data-translate="features.lowResourceDesc">Bilgisayarınızı yormaz</p>
+                    <h3 data-translate="features.lowResource">Ultra Hafif Performans</h3>
+                    <p data-translate="features.lowResourceDesc">Özel optimize edilmiş kod yapısı sayesinde minimum RAM ve CPU kullanımı</p>
                 </div>
                 <div class="feature-card">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
                     </svg>
-                    <h3 data-translate="features.easyUse">Kolay Kullanım</h3>
-                    <p data-translate="features.easyUseDesc">Tek tıkla kayıt başlatın ve kaydedin</p>
+                    <h3 data-translate="features.easyUse">Tek Tıkla Kayıt</h3>
+                    <p data-translate="features.easyUseDesc">Karmaşık ayarlar yok! Sadece kayıt butonuna basın</p>
                 </div>
             </div>
         </section>
@@ -74,18 +79,18 @@
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3 data-translate="howTo.step1">Chrome'a ekleyin</h3>
-                    <p data-translate="howTo.step1Desc">Chrome Web Mağazası'ndan uzantıyı yükleyin</p>
+                    <h3 data-translate="howTo.step1">Chrome'a Hemen Ekleyin</h3>
+                    <p data-translate="howTo.step1Desc">Chrome Web Mağazası'ndan tek tıkla yükleyin</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3 data-translate="howTo.step2">Tango yayınını açın</h3>
+                    <h3 data-translate="howTo.step2">Tango Yayınını Açın</h3>
                     <p data-translate="howTo.step2Desc">Kaydetmek istediğiniz yayını açın ve sayfayı bir kez yenileyin</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3 data-translate="howTo.step3">Kaydet butonuna basın</h3>
-                    <p data-translate="howTo.step3Desc">Kayıt otomatik olarak başlayacak ve segmentler birleştirilecek</p>
+                    <h3 data-translate="howTo.step3">Kayda Başlayın</h3>
+                    <p data-translate="howTo.step3Desc">Yeşil kayıt butonuna tıklayın ve arkanıza yaslanın</p>
                 </div>
             </div>
         </section>
@@ -94,20 +99,20 @@
             <h2 class="neon-text" data-translate="faq.title">Sık Sorulan Sorular</h2>
             <div class="faq-list">
                 <details>
-                    <summary data-translate="faq.q1">Arka planda çalışır mı?</summary>
-                    <p data-translate="faq.a1">Evet, sekmeyi kapatsanız bile kayıt devam eder.</p>
+                    <summary data-translate="faq.q1">Arka planda gerçekten kesintisiz çalışıyor mu?</summary>
+                    <p data-translate="faq.a1">Kesinlikle! Sekmeyi alta atın, başka işlerinizi yapın</p>
                 </details>
                 <details>
                     <summary data-translate="faq.q2">Çoklu yayın kaydı yapabilir miyim?</summary>
-                    <p data-translate="faq.a2">Şu an için çoklu yayın özelliği geliştirme aşamasındadır. Sadece tekli yayın yapan yayıncılar için kullanılabilir.</p>
+                    <p data-translate="faq.a2">Şu an için çoklu yayın özelliği geliştirme aşamasındadır</p>
                 </details>
                 <details>
-                    <summary data-translate="faq.q3">Ne kadar süre kaydedebilirim?</summary>
-                    <p data-translate="faq.a3">İstediğiniz süre kadar kayıt yapabilirsiniz, bir sınırlama yoktur.</p>
+                    <summary data-translate="faq.q3">Kayıt süresinde limit var mı?</summary>
+                    <p data-translate="faq.a3">Hayır, kesinlikle yok! İster 1 dakika, ister 10 saat</p>
                 </details>
                 <details>
                     <summary data-translate="faq.q4">Video kalitesi nasıl olacak?</summary>
-                    <p data-translate="faq.a4">Videolar yayının orijinal kalitesinde kaydedilir ve segmentler otomatik olarak birleştirilir.</p>
+                    <p data-translate="faq.a4">Crystal-clear kayıt! Akıllı segment birleştirme teknolojimiz sayesinde kalite kaybı olmaz</p>
                 </details>
             </div>
         </section>
@@ -119,15 +124,15 @@
                     <svg class="icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03c-.02 1.64-1.35 2.97-3 2.97-1.66 0-3-1.34-3-3z"/>
                     </svg>
-                    <h3 data-translate="comingSoon.feature1">Çoklu Yayın Desteği</h3>
+                    <h3 data-translate="comingSoon.feature1">Gelişmiş Çoklu Yayın Desteği</h3>
                     <p data-translate="comingSoon.feature1Desc">Birden fazla yayını aynı anda kaydetme özelliği</p>
                 </div>
                 <div class="future-feature">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
                     </svg>
-                    <h3 data-translate="comingSoon.feature2">Gelişmiş Kayıt Seçenekleri</h3>
-                    <p data-translate="comingSoon.feature2Desc">Kalite seçimi ve özel kayıt ayarları</p>
+                    <h3 data-translate="comingSoon.feature2">Profesyonel Kayıt Seçenekleri</h3>
+                    <p data-translate="comingSoon.feature2Desc">Video kalitesi, format seçimi ve özel ayarlar</p>
                 </div>
             </div>
         </section>
