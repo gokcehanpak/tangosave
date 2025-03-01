@@ -127,7 +127,7 @@ header {
     align-items: center;
     gap: 40px;
     margin: 40px 0 80px;
-    padding: 30px;
+    padding: 40px;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -150,23 +150,26 @@ header {
 }
 
 .hero-image {
-    flex: 1;
+    flex: 1.2;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 600px;
+    overflow: hidden;
 }
 
 .screenshot {
     width: 100%;
-    max-width: 500px;
+    height: auto;
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    object-fit: contain;
 }
 
 .screenshot:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
 }
 
 /* Section Title */
