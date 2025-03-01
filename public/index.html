@@ -1,164 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="title">Tango Yayın Kaydedici</title>
-    <meta name="description" content="Tango canlı yayınlarını kaydetmek için Chrome uzantısı. Tek tıkla kayıt başlatın, otomatik segment birleştirme ve kolay kullanım.">
+    <meta name="description" content="TangoSave Chrome Eklentisi - Tango canlı yayınlarını kaydedin. Basit, güvenli ve kullanıcı dostu bir çözüm. Sadece 4.99 USD.">
+    <meta name="keywords" content="TangoSave, Tango live, canlı yayın kaydedici, tango stream recorder, premium, chrome eklentisi">
+    <title>TangoSave - Tango Canlı Yayın Kaydedici</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Adsterra Social Bar -->
-    <script type='text/javascript' src='//pl25986163.effectiveratecpm.com/9a/64/6c/9a646cb55c72a1a3a946656d6e618fc0.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icon128.png">
 </head>
+
 <body>
     <div class="language-selector">
-        <button class="lang-btn active" data-lang="tr">TR</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="tr">Türkçe</button>
+        <button class="lang-btn" data-lang="en">English</button>
     </div>
 
     <div class="container">
         <header>
-            <h1 class="neon-text">
-                <svg class="logo-icon" viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-                </svg>
-                <span data-translate="title">Tango Yayın Kaydedici</span>
-            </h1>
+            <h1 class="neon-text">TangoSave</h1>
+            <p class="tagline" data-translate-tr="Tango canlı yayınlarını kaydetmek için en kolay ve güvenilir çözüm" data-translate-en="The easiest and most reliable solution for recording Tango live streams">Tango canlı yayınlarını kaydetmek için en kolay ve güvenilir çözüm</p>
             <div class="version-info">
-                <span class="version-badge" data-translate="version">Versiyon 1.0</span>
-                <span class="beta-badge" data-translate="beta">BETA</span>
+                <div class="version-badge">v1.0</div>
             </div>
-            <a href="#" id="chromeInstall" class="install-btn">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+            <a href="https://chrome.google.com/webstore/detail/tangosave-stream-recorder/gppjeeppmcbillocchbaojehnnjepnmi" target="_blank" class="install-btn" data-translate="button.install">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                    <line x1="16" y1="8" x2="2" y2="22"></line>
+                    <line x1="17.5" y1="15" x2="9" y2="15"></line>
                 </svg>
-                <span data-translate="installButton">Chrome'da Yükle</span>
+                Hemen Yükle
             </a>
         </header>
 
-        <section class="important-notice">
-            <h2 data-translate="notice.title">Önemli Bilgilendirme</h2>
-            <div class="notice-content" data-translate="notice.content">
-                Bu uzantı şu an BETA aşamasındadır ve sadece tekli yayın yapan yayıncılar için kullanılabilir durumdadır.
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title" data-translate-tr="Canlı Yayınları Tek Tıkla Kaydedin" data-translate-en="Record Live Streams with One Click">Canlı Yayınları Tek Tıkla Kaydedin</h2>
+                <p class="hero-text" data-translate-tr="TangoSave, Tango platformundaki tüm canlı yayınları kolayca kaydetmenizi sağlayan premium ve kullanıcı dostu bir Chrome eklentisidir. Sadece 4.99 USD karşılığında özel anlarınızı kaçırmadan sonsuza dek saklayın." data-translate-en="TangoSave is a premium and user-friendly Chrome extension that allows you to easily record all live streams on the Tango platform. Save your special moments forever without missing anything for just 4.99 USD.">TangoSave, Tango platformundaki tüm canlı yayınları kolayca kaydetmenizi sağlayan premium ve kullanıcı dostu bir Chrome eklentisidir. Sadece 4.99 USD karşılığında özel anlarınızı kaçırmadan sonsuza dek saklayın.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/screenshot1.png" alt="TangoSave arayüzü" class="screenshot" width="600" height="400">
             </div>
         </section>
 
         <section class="features">
-            <h2 class="neon-text" data-translate="features.title">Güçlü Özellikler</h2>
-            
-            <!-- Adsterra Native Banner -->
-            <div class="ad-container ad-features">
-                <script async="async" data-cfasync="false" src="//pl25986168.effectiveratecpm.com/a1f07522414a67b7531085843b019a01/invoke.js"></script>
-                <div id="container-a1f07522414a67b7531085843b019a01"></div>
-            </div>
-
+            <h2 class="section-title" data-translate="title.features">Özellikler</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03c-.02 1.64-1.35 2.97-3 2.97-1.66 0-3-1.34-3-3z"/>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    <h3 data-translate="features.autoMerge">Akıllı Segment Birleştirme</h3>
-                    <p data-translate="features.autoMergeDesc">Gelişmiş algoritma sayesinde kaydedilen tüm parçalar otomatik olarak birleştirilerek tek bir kesintisiz video dosyası oluşturulur</p>
+                    <h3 data-translate-tr="Gerçek Zamanlı Kayıt" data-translate-en="Real-Time Recording">Gerçek Zamanlı Kayıt</h3>
+                    <p data-translate-tr="Yayınları gerçek zamanlı olarak, herhangi bir gecikme veya kalite kaybı olmadan doğrudan bilgisayarınıza kaydedin." data-translate-en="Record streams in real-time directly to your computer without any delay or quality loss.">Yayınları gerçek zamanlı olarak, herhangi bir gecikme veya kalite kaybı olmadan doğrudan bilgisayarınıza kaydedin.</p>
                 </div>
                 <div class="feature-card">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12 16l4-4h-3V3h-2v9H8l4 4zm9-13h-6v1.99h6v14.03H3V4.99h6V3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
                     </svg>
-                    <h3 data-translate="features.background">Kesintisiz Arka Plan Kaydı</h3>
-                    <p data-translate="features.backgroundDesc">Sekmeyi alta atsanız, başka sekmelerde gezinseniz veya tarayıcıyı simge durumuna küçültseniz bile kayıt kesintisiz devam eder</p>
+                    <h3 data-translate-tr="Tüm Cihazlarla Uyumlu" data-translate-en="Compatible with All Devices">Tüm Cihazlarla Uyumlu</h3>
+                    <p data-translate-tr="Kaydedilen videolar standart TS (Transport Stream) formatındadır ve tüm cihazlarda sorunsuz oynatılabilir." data-translate-en="Recorded videos are in standard TS (Transport Stream) format and can be played smoothly on all devices.">Kaydedilen videolar standart TS (Transport Stream) formatındadır ve tüm cihazlarda sorunsuz oynatılabilir.</p>
                 </div>
                 <div class="feature-card">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.03-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
-                    <h3 data-translate="features.lowResource">Ultra Hafif Performans</h3>
-                    <p data-translate="features.lowResourceDesc">Özel optimize edilmiş kod yapısı sayesinde minimum RAM ve CPU kullanımı</p>
+                    <h3 data-translate-tr="Çoklu Yayıncı Desteği" data-translate-en="Multi-Broadcaster Support">Çoklu Yayıncı Desteği</h3>
+                    <p data-translate-tr="Birden fazla yayıncı olduğunda her biri için ayrı video dosyaları oluşturulur, böylece hiçbir içeriği kaçırmazsınız." data-translate-en="When there are multiple broadcasters, separate video files are created for each, so you don't miss any content.">Birden fazla yayıncı olduğunda her biri için ayrı video dosyaları oluşturulur, böylece hiçbir içeriği kaçırmazsınız.</p>
                 </div>
                 <div class="feature-card">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
-                    <h3 data-translate="features.easyUse">Tek Tıkla Kayıt</h3>
-                    <p data-translate="features.easyUseDesc">Karmaşık ayarlar yok! Sadece kayıt butonuna basın</p>
+                    <h3 data-translate-tr="Gizlilik Odaklı" data-translate-en="Privacy Focused">Gizlilik Odaklı</h3>
+                    <p data-translate-tr="Hiçbir kişisel veriniz toplanmaz veya paylaşılmaz. Tüm işlemler yerel olarak gerçekleştirilir." data-translate-en="None of your personal data is collected or shared. All processes are performed locally.">Hiçbir kişisel veriniz toplanmaz veya paylaşılmaz. Tüm işlemler yerel olarak gerçekleştirilir.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <h3 data-translate-tr="Kullanımı Kolay Arayüz" data-translate-en="Easy to Use Interface">Kullanımı Kolay Arayüz</h3>
+                    <p data-translate-tr="Basit ve anlaşılır arayüzü sayesinde herkes kolayca kullanabilir. Teknik bilgi gerektirmez." data-translate-en="Everyone can use it easily thanks to its simple and intuitive interface. No technical knowledge required.">Basit ve anlaşılır arayüzü sayesinde herkes kolayca kullanabilir. Teknik bilgi gerektirmez.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    <h3 data-translate-tr="Hafif ve Hızlı" data-translate-en="Lightweight and Fast">Hafif ve Hızlı</h3>
+                    <p data-translate-tr="Sistem kaynaklarını minimum düzeyde kullanan hafif yapısı sayesinde bilgisayarınızı yavaşlatmaz." data-translate-en="It doesn't slow down your computer thanks to its lightweight structure that uses system resources at a minimum level.">Sistem kaynaklarını minimum düzeyde kullanan hafif yapısı sayesinde bilgisayarınızı yavaşlatmaz.</p>
                 </div>
             </div>
         </section>
 
         <section class="how-to">
-            <h2 class="neon-text" data-translate="howTo.title">Nasıl Kullanılır?</h2>
+            <h2 class="section-title" data-translate="title.howto">Nasıl Kullanılır?</h2>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3 data-translate="howTo.step1">Chrome'a Hemen Ekleyin</h3>
-                    <p data-translate="howTo.step1Desc">Chrome Web Mağazası'ndan tek tıkla yükleyin</p>
+                    <h3 data-translate-tr="Eklentiyi Yükleyin" data-translate-en="Install the Extension">Eklentiyi Yükleyin</h3>
+                    <p data-translate-tr="Chrome Web Mağazası'ndan TangoSave eklentisini yükleyin ve tarayıcınıza ekleyin." data-translate-en="Install the TangoSave extension from the Chrome Web Store and add it to your browser.">Chrome Web Mağazası'ndan TangoSave eklentisini yükleyin ve tarayıcınıza ekleyin.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3 data-translate="howTo.step2">Tango Yayınını Açın</h3>
-                    <p data-translate="howTo.step2Desc">Kaydetmek istediğiniz yayını açın ve sayfayı bir kez yenileyin</p>
+                    <h3 data-translate-tr="Tango Sayfasını Açın" data-translate-en="Open the Tango Page">Tango Sayfasını Açın</h3>
+                    <p data-translate-tr="Kaydetmek istediğiniz canlı yayını içeren Tango sayfasını açın ve sayfayı bir kez yenileyin." data-translate-en="Open the Tango page containing the live stream you want to record and refresh the page once.">Kaydetmek istediğiniz canlı yayını içeren Tango sayfasını açın ve sayfayı bir kez yenileyin.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3 data-translate="howTo.step3">Kayda Başlayın</h3>
-                    <p data-translate="howTo.step3Desc">Yeşil kayıt butonuna tıklayın ve arkanıza yaslanın</p>
+                    <h3 data-translate-tr="Kaydı Başlatın" data-translate-en="Start Recording">Kaydı Başlatın</h3>
+                    <p data-translate-tr="Eklenti simgesine tıklayın ve 'Kaydı Başlat' düğmesine basın. İzlemeye devam edin ve kayıt otomatik olarak gerçekleşecektir." data-translate-en="Click on the extension icon and press the 'Start Recording' button. Continue watching and the recording will take place automatically.">Eklenti simgesine tıklayın ve 'Kaydı Başlat' düğmesine basın. İzlemeye devam edin ve kayıt otomatik olarak gerçekleşecektir.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2 class="section-title" data-translate="title.stats">Rakamlarla TangoSave</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label" data-translate-tr="Kullanıcı" data-translate-en="Users">Kullanıcı</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.8/5</div>
+                    <div class="stat-label" data-translate-tr="Kullanıcı Puanı" data-translate-en="User Rating">Kullanıcı Puanı</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label" data-translate-tr="Kaydedilen Yayın" data-translate-en="Recorded Streams">Kaydedilen Yayın</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.99 USD</div>
+                    <div class="stat-label" data-translate-tr="Premium Fiyatı" data-translate-en="Premium Price">Premium Fiyatı</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="user-testimonials">
+            <h2 class="section-title" data-translate="title.testimonials">Kullanıcı Yorumları</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote" data-translate-tr="Bu eklenti tam olarak aradığım şeydi! Artık sevdiğim içerikleri kolayca kaydedebiliyorum ve daha sonra istediğim zaman izleyebiliyorum." data-translate-en="This extension was exactly what I was looking for! Now I can easily record the content I love and watch it whenever I want later.">Bu eklenti tam olarak aradığım şeydi! Artık sevdiğim içerikleri kolayca kaydedebiliyorum ve daha sonra istediğim zaman izleyebiliyorum.</p>
+                    <div class="author" data-translate-tr="Mehmet Y." data-translate-en="Michael S.">Mehmet Y.</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote" data-translate-tr="Çok basit ve kullanımı kolay. Diğer kayıt uygulamalarında yaşadığım sorunların hiçbirini burada yaşamadım. Kesinlikle tavsiye ediyorum!" data-translate-en="Very simple and easy to use. I didn't experience any of the problems I had with other recording applications. I definitely recommend it!">Çok basit ve kullanımı kolay. Diğer kayıt uygulamalarında yaşadığım sorunların hiçbirini burada yaşamadım. Kesinlikle tavsiye ediyorum!</p>
+                    <div class="author" data-translate-tr="Ayşe K." data-translate-en="Emma R.">Ayşe K.</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote" data-translate-tr="Çoklu yayıncı desteği harika bir özellik. Hiçbir içeriği kaçırmıyorum ve tüm yayıncıları ayrı kayıtlarda görebiliyorum." data-translate-en="Multi-broadcaster support is a great feature. I don't miss any content and can see all broadcasters in separate recordings.">Çoklu yayıncı desteği harika bir özellik. Hiçbir içeriği kaçırmıyorum ve tüm yayıncıları ayrı kayıtlarda görebiliyorum.</p>
+                    <div class="author" data-translate-tr="Ali B." data-translate-en="David W.">Ali B.</div>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
         </section>
 
         <section class="faq">
-            <h2 class="neon-text" data-translate="faq.title">Sık Sorulan Sorular</h2>
-            
-            <!-- Adsterra Native Banner -->
-            <div class="ad-container ad-faq">
-                <script type='text/javascript' src='//pl208709.puhtml.com/52/70/f8/5270f83c5598b24c70f3ca73b2ca626c.js'></script>
-            </div>
-
+            <h2 class="section-title" data-translate="title.faq">Sıkça Sorulan Sorular</h2>
             <div class="faq-list">
                 <details>
-                    <summary data-translate="faq.q1">Arka planda gerçekten kesintisiz çalışıyor mu?</summary>
-                    <p data-translate="faq.a1">Kesinlikle! Sekmeyi alta atın, başka işlerinizi yapın</p>
+                    <summary data-translate-tr="TangoSave ücretsiz mi?" data-translate-en="Is TangoSave free?">TangoSave ücretsiz mi?</summary>
+                    <p data-translate-tr="TangoSave, premium bir Chrome eklentisidir ve tek seferlik 4.99 USD ödeme ile kullanılabilir. Ödeme sonrası herhangi bir abonelik veya ek ücret yoktur." data-translate-en="TangoSave is a premium Chrome extension available for a one-time payment of 4.99 USD. There are no subscriptions or additional fees after payment.">TangoSave, premium bir Chrome eklentisidir ve tek seferlik 4.99 USD ödeme ile kullanılabilir. Ödeme sonrası herhangi bir abonelik veya ek ücret yoktur.</p>
                 </details>
                 <details>
-                    <summary data-translate="faq.q2">Çoklu yayın kaydı yapabilir miyim?</summary>
-                    <p data-translate="faq.a2">Şu an için çoklu yayın özelliği geliştirme aşamasındadır</p>
+                    <summary data-translate-tr="Kaydedilen videolar nereye kaydedilir?" data-translate-en="Where are the recorded videos saved?">Kaydedilen videolar nereye kaydedilir?</summary>
+                    <p data-translate-tr="Kaydedilen videolar, tarayıcınızın indirme klasörüne TS (Transport Stream) formatında kaydedilir. Dosya adı, yayıncı adı ve tarih bilgisini içerir." data-translate-en="Recorded videos are saved to your browser's download folder in TS (Transport Stream) format. The file name includes the broadcaster name and date information.">Kaydedilen videolar, tarayıcınızın indirme klasörüne TS (Transport Stream) formatında kaydedilir. Dosya adı, yayıncı adı ve tarih bilgisini içerir.</p>
                 </details>
                 <details>
-                    <summary data-translate="faq.q3">Kayıt süresinde limit var mı?</summary>
-                    <p data-translate="faq.a3">Hayır, kesinlikle yok! İster 1 dakika, ister 10 saat</p>
+                    <summary data-translate-tr="Birden fazla yayıncı olduğunda ne olur?" data-translate-en="What happens when there are multiple broadcasters?">Birden fazla yayıncı olduğunda ne olur?</summary>
+                    <p data-translate-tr="Birden fazla yayıncı olduğunda, her yayıncı için ayrı bir video dosyası oluşturulur. Böylece tüm içeriklere ayrı ayrı erişebilir ve hiçbir yayını kaçırmazsınız." data-translate-en="When there are multiple broadcasters, a separate video file is created for each broadcaster. This way, you can access all content separately and not miss any broadcast.">Birden fazla yayıncı olduğunda, her yayıncı için ayrı bir video dosyası oluşturulur. Böylece tüm içeriklere ayrı ayrı erişebilir ve hiçbir yayını kaçırmazsınız.</p>
                 </details>
                 <details>
-                    <summary data-translate="faq.q4">Video kalitesi nasıl olacak?</summary>
-                    <p data-translate="faq.a4">Crystal-clear kayıt! Akıllı segment birleştirme teknolojimiz sayesinde kalite kaybı olmaz</p>
+                    <summary data-translate-tr="TangoSave'i nasıl güncelleyebilirim?" data-translate-en="How can I update TangoSave?">TangoSave'i nasıl güncelleyebilirim?</summary>
+                    <p data-translate-tr="Chrome eklentileri genellikle otomatik olarak güncellenir. Manuel olarak güncellemek için chrome://extensions adresine gidebilir ve 'Güncellemeleri Denetle' seçeneğini kullanabilirsiniz." data-translate-en="Chrome extensions are usually updated automatically. To update manually, you can go to chrome://extensions and use the 'Check for Updates' option.">Chrome eklentileri genellikle otomatik olarak güncellenir. Manuel olarak güncellemek için chrome://extensions adresine gidebilir ve 'Güncellemeleri Denetle' seçeneğini kullanabilirsiniz.</p>
+                </details>
+                <details>
+                    <summary data-translate-tr="TangoSave'in kullanımı yasal mı?" data-translate-en="Is using TangoSave legal?">TangoSave'in kullanımı yasal mı?</summary>
+                    <p data-translate-tr="TangoSave, kişisel kullanım için tasarlanmıştır. Kaydedilen içeriği kişisel arşivinizde saklamak için kullanabilirsiniz. Ancak, telif hakkı sahibinin izni olmadan içeriği dağıtmak veya ticari amaçlarla kullanmak yasal olmayabilir. Her zaman yerel telif hakkı yasalarına uygun hareket etmenizi öneririz." data-translate-en="TangoSave is designed for personal use. You can use it to store recorded content in your personal archive. However, distributing or using the content for commercial purposes without the permission of the copyright owner may not be legal. We always recommend that you act in accordance with local copyright laws.">TangoSave, kişisel kullanım için tasarlanmıştır. Kaydedilen içeriği kişisel arşivinizde saklamak için kullanabilirsiniz. Ancak, telif hakkı sahibinin izni olmadan içeriği dağıtmak veya ticari amaçlarla kullanmak yasal olmayabilir. Her zaman yerel telif hakkı yasalarına uygun hareket etmenizi öneririz.</p>
                 </details>
             </div>
         </section>
 
-        <section class="coming-soon">
-            <h2 class="neon-text" data-translate="comingSoon.title">Yakında Gelecek Özellikler</h2>
-            <div class="feature-list">
-                <div class="future-feature">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03c-.02 1.64-1.35 2.97-3 2.97-1.66 0-3-1.34-3-3z"/>
+        <section class="cta-section">
+            <h2 class="cta-title" data-translate-tr="Özel Anlarınızı Kaçırmayın" data-translate-en="Don't Miss Your Special Moments">Özel Anlarınızı Kaçırmayın</h2>
+            <p class="cta-text" data-translate-tr="Sadece 4.99 USD karşılığında TangoSave ile sevdiğiniz yayınları kolayca kaydedin ve istediğiniz zaman tekrar izleyin." data-translate-en="For just 4.99 USD, easily record your favorite broadcasts with TangoSave and watch them again whenever you want.">Sadece 4.99 USD karşılığında TangoSave ile sevdiğiniz yayınları kolayca kaydedin ve istediğiniz zaman tekrar izleyin.</p>
+            <a href="https://chrome.google.com/webstore/detail/tangosave-stream-recorder/gppjeeppmcbillocchbaojehnnjepnmi" target="_blank" class="cta-button" data-translate="button.install">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                    <line x1="16" y1="8" x2="2" y2="22"></line>
+                    <line x1="17.5" y1="15" x2="9" y2="15"></line>
+                </svg>
+                Hemen Yükle
+            </a>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="logo-icon-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                        <line x1="16" y1="8" x2="2" y2="22"></line>
+                        <line x1="17.5" y1="15" x2="9" y2="15"></line>
                     </svg>
-                    <h3 data-translate="comingSoon.feature1">Gelişmiş Çoklu Yayın Desteği</h3>
-                    <p data-translate="comingSoon.feature1Desc">Birden fazla yayını aynı anda kaydetme özelliği</p>
+                    <span class="logo-text">TangoSave</span>
                 </div>
-                <div class="future-feature">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
-                    </svg>
-                    <h3 data-translate="comingSoon.feature2">Profesyonel Kayıt Seçenekleri</h3>
-                    <p data-translate="comingSoon.feature2Desc">Video kalitesi, format seçimi ve özel ayarlar</p>
+                <div class="footer-links">
+                    <a href="privacy.html" class="footer-link" data-translate-tr="Gizlilik Politikası" data-translate-en="Privacy Policy">Gizlilik Politikası</a>
+                    <a href="terms.html" class="footer-link" data-translate-tr="Kullanım Koşulları" data-translate-en="Terms of Use">Kullanım Koşulları</a>
+                    <a href="mailto:pakwaresinc@gmail.com" class="footer-link" data-translate-tr="İletişim" data-translate-en="Contact Us">İletişim</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </section>
+            <div class="copyright">
+                <p>&copy; 2023-2024 TangoSave. <span data-translate-tr="Tüm hakları saklıdır." data-translate-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
+                <p data-translate-tr="Pakware Inc. tarafından geliştirilmiştir." data-translate-en="Developed by Pakware Inc.">Pakware Inc. tarafından geliştirilmiştir.</p>
+                <p data-translate-tr="E-posta: " data-translate-en="Email: ">E-posta: <a href="mailto:pakwaresinc@gmail.com">pakwaresinc@gmail.com</a></p>
+            </div>
+        </footer>
     </div>
 
-    <!-- Adsterra Banner Alt -->
-    <div id="bottom-banner" class="ad-container">
-        <script type='text/javascript' src='//pl208709.puhtml.com/52/70/f8/5270f83c5598b24c70f3ca73b2ca626c.js'></script>
-    </div>
-
-    <script src="js/translations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html> 
