@@ -418,7 +418,7 @@ details p {
 }
 
 .quote::before {
-    content: """;
+    content: "\201C";
     font-size: 60px;
     position: absolute;
     top: -20px;
