@@ -161,12 +161,12 @@ header {
     max-width: 500px;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    transform: perspective(1000px) rotateY(-5deg);
     transition: var(--transition);
+    border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
 .screenshot:hover {
-    transform: perspective(1000px) rotateY(0);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
 }
 
 /* Section Title */
