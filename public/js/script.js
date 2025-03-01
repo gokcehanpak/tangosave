@@ -16,8 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // FAQ açılır-kapanır özelliği
     setupFaqInteraction();
     
-    // TangoSave logosu için popup
-    setupLogoPopup();
+    // Chrome Web Store'a yönlendirme
+    const installButtons = document.querySelectorAll('.install-btn, .cta-button');
+    installButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://chrome.google.com/webstore/detail/tangosave-stream-recorder/gppjeeppmcbillocchbaojehnnjepnmi', '_blank');
+        });
+    });
 });
 
 /**
@@ -78,6 +84,9 @@ function applyTranslations(lang) {
         const text = el.getAttribute(`data-translate-${lang}`);
         if (text) el.textContent = text;
     });
+    
+    // Mevcut dil değişkenini kaydet
+    window.currentLang = lang;
 }
 
 /**
@@ -95,7 +104,8 @@ function getTranslation(key, lang) {
             "title.faq": "Sıkça Sorulan Sorular",
             "title.testimonials": "Kullanıcı Yorumları",
             "title.stats": "Rakamlarla TangoSave",
-            "format.info": "TS Formatı ile Kusursuz Kayıt"
+            "format.info": "TS Formatı ile Kusursuz Kayıt",
+            "multitab.feature": "Her sekme ayrı çalışır"
         },
         en: {
             "button.install": "Buy Now (4.99 USD)",
@@ -104,7 +114,8 @@ function getTranslation(key, lang) {
             "title.faq": "Frequently Asked Questions",
             "title.testimonials": "User Testimonials",
             "title.stats": "TangoSave in Numbers",
-            "format.info": "Perfect Recording with TS Format"
+            "format.info": "Perfect Recording with TS Format",
+            "multitab.feature": "Each tab works independently"
         }
     };
     
@@ -177,146 +188,4 @@ function setupFaqInteraction() {
             });
         });
     });
-}
-
-/**
- * TangoSave logosu için popup oluşturur
- */
-function setupLogoPopup() {
-    // Popup HTML'ini oluştur ve body'e ekle
-    const popupHTML = `
-        <div id="logoPopup" class="logo-popup">
-            <div class="logo-popup-content">
-                <div class="popup-header">
-                    <button class="close-popup">&times;</button>
-                </div>
-                <div class="popup-logo">
-                    <svg class="logo-icon-popup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
-                        <line x1="16" y1="8" x2="2" y2="22"></line>
-                        <line x1="17.5" y1="15" x2="9" y2="15"></line>
-                    </svg>
-                    <span class="popup-logo-text">TangoSave</span>
-                </div>
-                <div class="popup-content" data-translate-tr="Favori Tango yayınlarınızı TS formatında kaydedin!" data-translate-en="Record your favorite Tango streams in TS format!">
-                    Favori Tango yayınlarınızı TS formatında kaydedin!
-                </div>
-            </div>
-        </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', popupHTML);
-    
-    // Popup için CSS ekle
-    const popupStyle = document.createElement('style');
-    popupStyle.textContent = `
-        .logo-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .logo-popup.show {
-            display: flex;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .logo-popup-content {
-            background: var(--bg-gradient);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            max-width: 400px;
-            width: 90%;
-            border: 1px solid var(--primary-color);
-            box-shadow: var(--neon-shadow);
-            text-align: center;
-        }
-        
-        .popup-header {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 15px;
-        }
-        
-        .close-popup {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 24px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .close-popup:hover {
-            color: var(--primary-color);
-        }
-        
-        .popup-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .logo-icon-popup {
-            color: var(--primary-color);
-            filter: drop-shadow(var(--neon-shadow));
-            margin-bottom: 15px;
-        }
-        
-        .popup-logo-text {
-            font-size: 32px;
-            font-weight: 600;
-            color: var(--primary-color);
-            text-shadow: var(--neon-shadow);
-        }
-        
-        .popup-content {
-            color: var(--text-secondary);
-            font-size: 18px;
-            line-height: 1.6;
-            margin-top: 15px;
-        }
-    `;
-    document.head.appendChild(popupStyle);
-    
-    // Logo tıklandığında popup'ı göster
-    document.querySelectorAll('.footer-logo, .neon-text').forEach(logo => {
-        logo.style.cursor = 'pointer';
-        logo.addEventListener('click', showLogoPopup);
-    });
-    
-    // Popup kapatma butonu
-    document.querySelector('.close-popup').addEventListener('click', hideLogoPopup);
-    
-    // Popup dışına tıklandığında kapat
-    document.getElementById('logoPopup').addEventListener('click', (e) => {
-        if (e.target === document.getElementById('logoPopup')) {
-            hideLogoPopup();
-        }
-    });
-}
-
-/**
- * Logo popup'ını göster
- */
-function showLogoPopup() {
-    const popup = document.getElementById('logoPopup');
-    popup.classList.add('show');
-    // Dil tercihini popup'a da uygula
-    applyTranslations(currentLang);
-}
-
-/**
- * Logo popup'ını gizle 
- */
-function hideLogoPopup() {
-    const popup = document.getElementById('logoPopup');
-    popup.classList.remove('show');
 } 
