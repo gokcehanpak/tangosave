@@ -66,15 +66,30 @@ body {
 /* Header */
 header {
     text-align: center;
-    margin-bottom: 60px;
-    animation: fadeIn 1s ease;
+    margin-bottom: 40px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.logo-icon-header {
+    color: var(--primary-color);
+    filter: drop-shadow(var(--neon-shadow));
 }
 
 .neon-text {
     font-size: 48px;
+    font-weight: 700;
     color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-shadow: var(--neon-shadow);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .tagline {
