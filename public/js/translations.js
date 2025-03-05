@@ -6,7 +6,7 @@ const translations = {
         installButton: "Chrome'da Yükle",
         notice: {
             title: "Önemli Bilgilendirme",
-            content: "Bu premium uzantı, tek seferlik 4.99 USD ödeme ile kullanılabilir ve hem tekli hem çoklu yayıncılar için tam destek sunar."
+            content: "Bu uzantı tamamen ücretsizdir ve hem tekli hem çoklu yayıncılar için tam destek sunar. Geliştirmeye destek olmak için bağış yapabilirsiniz."
         },
         features: {
             title: "Güçlü Özellikler",
@@ -22,7 +22,7 @@ const translations = {
         howTo: {
             title: "Nasıl Kullanılır?",
             step1: "Chrome'a Hemen Ekleyin",
-            step1Desc: "Chrome Web Mağazası'ndan 4.99 USD karşılığında satın alın ve hemen kullanmaya başlayın",
+            step1Desc: "Chrome Web Mağazası'ndan ücretsiz olarak ekleyin ve hemen kullanmaya başlayın",
             step2: "Tango Yayınını Açın",
             step2Desc: "Kaydetmek istediğiniz yayını açın ve en iyi performans için sayfayı bir kez yenileyin",
             step3: "Kayda Başlayın",
@@ -33,7 +33,7 @@ const translations = {
             q1: "Arka planda gerçekten kesintisiz çalışıyor mu?",
             a1: "Kesinlikle! Sekmeyi alta atın, başka işlerinizi yapın, hatta tarayıcıyı simge durumuna küçültün - kayıt mükemmel şekilde devam eder",
             q2: "Çoklu yayın kaydı yapabilir miyim?",
-            a2: "Evet! Premium sürümümüz hem tekli hem de çoklu yayın kaydını tam olarak desteklemektedir",
+            a2: "Evet! Ücretsiz sürümümüz hem tekli hem de çoklu yayın kaydını tam olarak desteklemektedir",
             q3: "Kayıt süresinde limit var mı?",
             a3: "Hayır, kesinlikle yok! İster 1 dakika, ister 10 saat - istediğiniz süre boyunca kesintisiz kayıt yapabilirsiniz",
             q4: "Video kalitesi nasıl olacak?",
@@ -54,7 +54,7 @@ const translations = {
         installButton: "Add to Chrome",
         notice: {
             title: "Important Notice",
-            content: "This premium extension is available for a one-time payment of 4.99 USD and offers full support for both single and multiple broadcasters."
+            content: "This extension is completely free and offers full support for both single and multiple broadcasters. You can make a donation to support development."
         },
         features: {
             title: "Powerful Features",
@@ -70,7 +70,7 @@ const translations = {
         howTo: {
             title: "How to Use?",
             step1: "Add to Chrome Now",
-            step1Desc: "Purchase from the Chrome Web Store for 4.99 USD and start using instantly",
+            step1Desc: "Add from the Chrome Web Store for free and start using instantly",
             step2: "Open Tango Stream",
             step2Desc: "Open the stream you want to record and refresh once for optimal performance",
             step3: "Start Recording",
@@ -81,7 +81,7 @@ const translations = {
             q1: "Does it really work seamlessly in the background?",
             a1: "Absolutely! Minimize the tab, do your other work, even minimize the browser - recording continues flawlessly",
             q2: "Can I record multiple streams?",
-            a2: "Yes! Our premium version fully supports both single and multiple stream recording",
+            a2: "Yes! Our free version fully supports both single and multiple stream recording",
             q3: "Is there a recording time limit?",
             a3: "No limits whatsoever! Whether it's 1 minute or 10 hours - record continuously for as long as you want",
             q4: "What about video quality?",
