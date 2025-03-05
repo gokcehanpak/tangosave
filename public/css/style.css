@@ -696,6 +696,17 @@ details p {
         width: 100%;
         max-width: 280px;
     }
+    
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .donate-link, .install-btn {
+        width: 100%;
+        max-width: 220px;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -751,4 +762,68 @@ details p {
 .donate-button svg {
     width: 24px;
     height: 24px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.donate-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #ff813f;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 129, 63, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.donate-link:hover {
+    background-color: #ff813f;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 129, 63, 0.5);
+}
+
+.coffee-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    transition: var(--transition);
+}
+
+.donate-link:hover .coffee-icon {
+    fill: #fff;
+}
+
+.coffee-footer-link {
+    display: flex;
+    align-items: center;
+    color: #ff813f !important;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.coffee-footer-link:hover {
+    background-color: rgba(255, 129, 63, 0.1);
+    transform: translateY(-2px);
+}
+
+.footer-coffee-icon {
+    width: 16px;
+    height: 16px;
+    transition: var(--transition);
+}
+
+.coffee-footer-link:hover .footer-coffee-icon {
+    transform: rotate(-5deg) scale(1.1);
 } 
