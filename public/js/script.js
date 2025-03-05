@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFaqInteraction();
     
     // Chrome Web Store'a yönlendirme
-    const installButtons = document.querySelectorAll('.install-btn, .cta-button');
+    const installButtons = document.querySelectorAll('.install-btn');
     installButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            window.open('https://chrome.google.com/webstore/detail/tangosave-stream-recorder/gppjeeppmcbillocchbaojehnnjepnmi', '_blank');
+            window.open('https://chrome.google.com/webstore/detail/tangosave-stream-recorder/ekliimdpdlbcgnhehpcfppcbdhebeebb', '_blank');
         });
     });
     
     // Bağış butonlarına event listener ekleme
-    const donateButtons = document.querySelectorAll('.donate-button, .footer-link[data-translate-tr="Destekle"]');
+    const donateButtons = document.querySelectorAll('.donate-button, .footer-link[data-translate-tr="Destekle"], .footer-link[data-translate-tr="Geliştirmeyi Destekle"], .cta-button.donate-button, .donate-link');
     donateButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
