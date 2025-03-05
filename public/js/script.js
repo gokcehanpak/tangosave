@@ -24,6 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open('https://chrome.google.com/webstore/detail/tangosave-stream-recorder/gppjeeppmcbillocchbaojehnnjepnmi', '_blank');
         });
     });
+    
+    // Bağış butonlarına event listener ekleme
+    const donateButtons = document.querySelectorAll('.donate-button, .footer-link[data-translate-tr="Destekle"]');
+    donateButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://www.buymeacoffee.com/pakwares', '_blank');
+        });
+    });
 });
 
 /**
@@ -98,7 +107,8 @@ function applyTranslations(lang) {
 function getTranslation(key, lang) {
     const translations = {
         tr: {
-            "button.install": "Satın Al (4.99 USD)",
+            "button.install": "Hemen Yükle",
+            "button.donate": "Geliştiriciyi Destekle",
             "title.features": "Özellikler",
             "title.howto": "Nasıl Kullanılır?",
             "title.faq": "Sıkça Sorulan Sorular",
@@ -108,7 +118,8 @@ function getTranslation(key, lang) {
             "multitab.feature": "Her sekme ayrı çalışır"
         },
         en: {
-            "button.install": "Buy Now (4.99 USD)",
+            "button.install": "Install Now",
+            "button.donate": "Support Developer",
             "title.features": "Features",
             "title.howto": "How to Use",
             "title.faq": "Frequently Asked Questions",
